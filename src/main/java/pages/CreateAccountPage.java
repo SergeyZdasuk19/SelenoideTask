@@ -22,11 +22,23 @@ public class CreateAccountPage {
                 .shouldBe(Condition.appear);
     }
 
-    public CreateAccountPage fillRegistrationFields() {
-        emailField.addTextInField("vavolit971@dmeproject.com");
-        nameField.addTextInField("NameTest");
-        lastNameField.addTextInField("LastNameTest");
-        passwordField.addTextInField("Password");
+    public CreateAccountPage fillEmailField(String email) {
+        emailField.addTextInField(email);
+        return this;
+    }
+
+    public CreateAccountPage fillNameField(String name) {
+        nameField.addTextInField(name);
+        return this;
+    }
+
+    public CreateAccountPage fillLastNameField(String lastName) {
+        lastNameField.addTextInField(lastName);
+        return this;
+    }
+
+    public CreateAccountPage fillPasswordField(String password) {
+        passwordField.addTextInField(password);
         return this;
     }
 
