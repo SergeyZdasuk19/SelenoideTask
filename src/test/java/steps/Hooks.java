@@ -3,6 +3,7 @@ package steps;
 import com.codeborne.selenide.Configuration;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.restassured.RestAssured;
 import provider.SelenoidDriverProvider;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -16,6 +17,7 @@ public class Hooks {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://grinfer.com/";
         open(Configuration.baseUrl);
+        RestAssured.basePath = "https://petstore.swagger.io/";
     }
 
     @After
